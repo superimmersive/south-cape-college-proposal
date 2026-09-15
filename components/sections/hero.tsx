@@ -1,8 +1,11 @@
 import { MediaFrame } from "@/components/media-frame";
 import { Reveal } from "@/components/reveal";
 import { heroMedia } from "@/content/capabilities";
+import { heroBackground } from "@/content/project-background";
 
 export function Hero() {
+  const media = { ...heroMedia, ...heroBackground() };
+
   return (
     <section id="top" className="relative overflow-hidden pb-16 pt-16 md:pb-24 md:pt-24">
       <div
@@ -46,12 +49,11 @@ export function Hero() {
 
         <Reveal className="mt-14 md:mt-20" delay={120}>
           <MediaFrame
-            media={heroMedia}
+            media={media}
             ratio="16 / 10"
             ratioMd="21 / 9"
             sizes="100vw"
             priority
-            videoControls
           />
         </Reveal>
       </div>

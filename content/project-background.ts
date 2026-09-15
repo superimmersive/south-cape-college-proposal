@@ -9,12 +9,13 @@ const SKIP = new Set([".gitkeep", "thumbs.db", ".ds_store"]);
 
 type Clip = { webm?: string; mp4?: string };
 
-function publicUrl(slug: string, file: string) {
-  return `/projects/${slug}/${encodeURIComponent(file)}`;
+function publicUrl(folder: string, file: string) {
+  const prefix = folder.replace(/\\/g, "/").replace(/^\/+|\/+$/g, "");
+  return `/${prefix}/${encodeURIComponent(file)}`;
 }
 
-function readFolder(slug: string) {
-  const dir = path.join(process.cwd(), "public", "projects", slug);
+function readFolder(relative: string) {
+  const dir = path.join(process.cwd(), "public", relative);
   const clips = new Map<string, Clip>();
   const images: string[] = [];
 
@@ -25,7 +26,7 @@ function readFolder(slug: string) {
 
     const ext = path.extname(file).toLowerCase();
     const base = path.basename(file, ext).toLowerCase();
-    const url = publicUrl(slug, file);
+    const url = publicUrl(relative, file);
 
     if (ext === ".webm") {
       const clip = clips.get(base) ?? {};
@@ -43,9 +44,8 @@ function readFolder(slug: string) {
   return { clips, images };
 }
 
-/** Clips and stills in `public/projects/<slug>/`, used behind the overlay. */
-export function backgroundFor(slug: string): Partial<Media> {
-  const { clips, images } = readFolder(slug);
+function backgroundFromFolder(relative: string): Partial<Media> {
+  const { clips, images } = readFolder(relative);
   const playlist = [...clips.entries()]
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([, clip]) => ({
@@ -61,6 +61,15 @@ export function backgroundFor(slug: string): Partial<Media> {
     placeholderVideo: first?.video ?? "",
     placeholderImage: playlist.length ? undefined : image,
   };
+}
+
+/** Clips and stills in `public/projects/<slug>/`, used behind the overlay. */
+export function backgroundFor(slug: string): Partial<Media> {
+  return backgroundFromFolder(path.join("projects", slug));
+}
+
+export function heroBackground(): Partial<Media> {
+  return backgroundFromFolder(path.join("videos", "hero"));
 }
 
 export function withProjectBackgrounds(items: Capability[]): Capability[] {

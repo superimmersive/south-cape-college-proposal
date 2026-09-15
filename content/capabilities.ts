@@ -84,5 +84,4 @@ export const heroMedia: Media = {
   poster: "", // /images/hero/hero-main.jpg
   placeholder: "Superimmersive",
   placeholderNote: "Immersive technology",
-  placeholderVideoWebm: "/videos/hero/Craniotomy_Forweb.webm",
 };
