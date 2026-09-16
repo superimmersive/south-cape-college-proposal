@@ -118,7 +118,6 @@ export const opportunityAreas: OpportunityArea[] = [
       image: "", // /images/poc/welding-poc.jpg
       video: "", // /videos/poc/welding-poc.mp4
       placeholder: "Welding Training",
-      placeholderNote: "Project visual",
       placeholderImage: "/images/opportunity/welding.png",
     },
     badge: "Already presented",
@@ -176,7 +175,6 @@ export const opportunityAreas: OpportunityArea[] = [
       image: "", // /images/poc/assembly-line-pneumatics.jpg
       video: "",
       placeholder: "Assembly-Line & Pneumatic Systems",
-      placeholderNote: "Project visual",
       placeholderImage: "/images/opportunity/assembly-line.png",
     },
     badge: "Industrial automation",
@@ -261,7 +259,6 @@ export const opportunityAreas: OpportunityArea[] = [
       image: "", // /images/poc/ppe-training.jpg
       video: "",
       placeholder: "PPE Training",
-      placeholderNote: "Project visual",
       placeholderImage: "/images/opportunity/ppe.png",
     },
     badge: "Safety",
@@ -321,7 +318,6 @@ export const opportunityAreas: OpportunityArea[] = [
     media: {
       image: "",
       placeholder: "Tool Assembly & Disassembly",
-      placeholderNote: "Project visual",
       placeholderImage: "/images/opportunity/tool-assembly.png",
     },
     badge: "Assembly",
@@ -377,7 +373,6 @@ export const opportunityAreas: OpportunityArea[] = [
     media: {
       image: "",
       placeholder: "Electrical Training",
-      placeholderNote: "Project visual",
       placeholderImage: "/images/opportunity/electrical.png",
     },
     badge: "Electrical",
@@ -450,7 +445,6 @@ export const opportunityAreas: OpportunityArea[] = [
     media: {
       image: "",
       placeholder: "Solar Technology",
-      placeholderNote: "Project visual",
       placeholderImage: "/images/opportunity/solar.png",
     },
     badge: "Solar",
@@ -497,7 +491,6 @@ export const opportunityAreas: OpportunityArea[] = [
     media: {
       image: "",
       placeholder: "Wind Turbine Technology",
-      placeholderNote: "Project visual",
       placeholderImage: "/images/opportunity/wind-turbine.png",
     },
     badge: "Wind",
@@ -543,7 +536,6 @@ export const opportunityAreas: OpportunityArea[] = [
     media: {
       image: "",
       placeholder: "EV Technology",
-      placeholderNote: "Project visual",
       placeholderImage: "/images/opportunity/ev.png",
     },
     badge: "EV",
@@ -600,7 +592,8 @@ export const opportunityAreas: OpportunityArea[] = [
   {
     slug: "hydrogen",
     title: "Hydrogen Technology",
-    summary: "Explore hydrogen production, fuel-cell systems and energy production.",
+    summary:
+      "Explore hydrogen production through electrolysis, with fuel-cell systems as a later expansion.",
     overview:
       "Explore hydrogen production through electrolysis, fuel-cell systems and energy production.",
     objective:
@@ -613,7 +606,6 @@ export const opportunityAreas: OpportunityArea[] = [
     media: {
       image: "",
       placeholder: "Hydrogen Technology",
-      placeholderNote: "Project visual",
       placeholderImage: "/images/opportunity/hydrogen.png",
     },
     badge: "Hydrogen",
@@ -674,7 +666,6 @@ export const opportunityAreas: OpportunityArea[] = [
     media: {
       image: "",
       placeholder: "Tourism",
-      placeholderNote: "Project visual",
       placeholderImage: "/images/opportunity/tourism.png",
     },
     badge: "Tourism",
@@ -739,7 +730,6 @@ export const opportunityAreas: OpportunityArea[] = [
     media: {
       image: "",
       placeholder: "Administration / Business Processes",
-      placeholderNote: "Project visual",
       placeholderImage: "/images/opportunity/administration.png",
     },
     badge: "Administration",

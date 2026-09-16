@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
-import Image from "next/image";
 import { hasMedia, type Media } from "@/content/media";
+import { withBase } from "@/lib/base-path";
 import { MediaPlaceholder } from "./media-placeholder";
 import { MediaVideo } from "./media-video";
 
@@ -37,7 +37,6 @@ export function MediaFrame({
   ratioMd,
   className = "",
   sizes = "(min-width: 1024px) 50vw, 100vw",
-  priority = false,
   zoom = false,
   videoControls = false,
   compactPlaceholder = false,
@@ -78,13 +77,10 @@ export function MediaFrame({
           objectPosition={objectPosition}
         />
       ) : media.image ? (
-        <Image
-          src={media.image}
+        <img
+          src={withBase(media.image)}
           alt={media.alt ?? media.placeholder}
-          fill
-          sizes={sizes}
-          priority={priority}
-          className={fit === "contain" ? "object-contain" : "object-cover"}
+          className={`absolute inset-0 h-full w-full ${fit === "contain" ? "object-contain" : "object-cover"}`}
           style={objectPosition ? { objectPosition } : undefined}
         />
       ) : (

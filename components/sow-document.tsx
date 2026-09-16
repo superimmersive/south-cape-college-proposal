@@ -330,6 +330,8 @@ export async function SowDocument({ area }: SowDocumentProps) {
               </p>
             </Reveal>
 
+            {exampleCount > 0 ? (
+              <>
             <Reveal as="p" className="eyebrow mt-14 mb-6" id="sow-example">
               Example
             </Reveal>
@@ -383,6 +385,8 @@ export async function SowDocument({ area }: SowDocumentProps) {
                 ))}
               </div>
             </Reveal>
+              </>
+            ) : null}
 
             <Reveal as="h3" className="h3 mt-14" delay={40}>
               {area.pocBrief.nextStepTitle}

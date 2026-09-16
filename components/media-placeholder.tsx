@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { withBase } from "@/lib/base-path";
 
 type MediaPlaceholderProps = {
   label: string;
@@ -22,18 +22,15 @@ export function MediaPlaceholder({
   note,
   compact = false,
   image,
-  sizes = "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw",
   overVideo = false,
 }: MediaPlaceholderProps) {
   return (
     <div className="pointer-events-none absolute inset-0 z-[1] select-none" aria-hidden="true">
       {!overVideo && image ? (
-        <Image
-          src={image}
+        <img
+          src={withBase(image)}
           alt=""
-          fill
-          sizes={sizes}
-          className="object-cover"
+          className="absolute inset-0 h-full w-full object-cover"
         />
       ) : !overVideo ? (
         <>

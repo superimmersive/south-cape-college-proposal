@@ -1,9 +1,9 @@
-import Image from "next/image";
 import { MediaPlaceholder } from "@/components/media-placeholder";
 import { Reveal } from "@/components/reveal";
 import { Section } from "@/components/section";
 import { aboutParagraphs, missionParagraphs } from "@/content/proposal";
 import { brand, founder } from "@/content/site";
+import { withBase } from "@/lib/base-path";
 
 export function About() {
   return (
@@ -16,12 +16,10 @@ export function About() {
               style={{ "--ratio": "4 / 5" } as React.CSSProperties}
             >
               {founder.portrait ? (
-                <Image
-                  src={founder.portrait}
+                <img
+                  src={withBase(founder.portrait)}
                   alt={`${founder.name}, ${founder.title}`}
-                  fill
-                  sizes="(min-width: 1024px) 24rem, 10rem"
-                  className="object-cover object-[center_18%]"
+                  className="absolute inset-0 h-full w-full object-cover object-[center_18%]"
                 />
               ) : (
                 <MediaPlaceholder label={founder.name} note="Founder portrait" compact />

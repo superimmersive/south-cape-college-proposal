@@ -27,7 +27,6 @@ export const projects: Project[] = [
       image: "", // /images/projects/vr-training.jpg
       video: "", // /videos/projects/vr-training.mp4
       placeholder: "VR Training",
-      placeholderNote: "Project visual",
     },
   },
   {
@@ -40,7 +39,6 @@ export const projects: Project[] = [
       image: "", // /images/projects/welding-industrial.jpg
       video: "",
       placeholder: "Welding / Industrial Simulation",
-      placeholderNote: "Project visual",
     },
   },
   {
@@ -53,7 +51,6 @@ export const projects: Project[] = [
       image: "", // /images/projects/interactive-3d.jpg
       video: "",
       placeholder: "Interactive 3D",
-      placeholderNote: "Project visual",
     },
   },
   {
@@ -66,7 +63,6 @@ export const projects: Project[] = [
       image: "", // /images/projects/web-multiplatform.jpg
       video: "",
       placeholder: "Web / Multiplatform",
-      placeholderNote: "Project visual",
     },
   },
   {
@@ -79,7 +75,6 @@ export const projects: Project[] = [
       image: "", // /images/projects/medical-vr.jpg
       video: "",
       placeholder: "Medical / Technical VR",
-      placeholderNote: "Project visual",
     },
   },
   {
@@ -92,7 +87,6 @@ export const projects: Project[] = [
       image: "", // /images/projects/general-portfolio.jpg
       video: "",
       placeholder: "General Portfolio",
-      placeholderNote: "Project visual",
     },
   },
 ];

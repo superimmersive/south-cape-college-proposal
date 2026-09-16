@@ -127,7 +127,7 @@ function copyForCaption(caption: string, copy?: Record<string, ExampleCopy>) {
 /** One panel per still, GIF or clip in `public/examples/<slug>/`. */
 export function examplePanelsFor(
   slug: string,
-  title: string,
+  _title: string,
   copy?: Record<string, ExampleCopy>,
 ): ExamplePanel[] {
   const { clips, images } = readFolder(path.join("examples", slug));
@@ -170,17 +170,7 @@ export function examplePanelsFor(
   }
 
   if (panels.length === 0) {
-    return [
-      {
-        title: "",
-        note: "",
-        media: {
-          placeholder: title,
-          placeholderNote: "Example visual",
-          alt: `${title} example`,
-        },
-      },
-    ];
+    return [];
   }
 
   if (copy) {

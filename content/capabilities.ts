@@ -17,7 +17,6 @@ export const capabilities: Capability[] = [
       image: "",
       video: "",
       placeholder: "Immersive Training Solutions",
-      placeholderNote: "Project visual",
     },
   },
   {
@@ -28,7 +27,6 @@ export const capabilities: Capability[] = [
       image: "",
       video: "",
       placeholder: "Interactive Products",
-      placeholderNote: "Project visual",
     },
   },
   {
@@ -39,7 +37,6 @@ export const capabilities: Capability[] = [
       image: "",
       video: "",
       placeholder: "Simulated Environments",
-      placeholderNote: "Project visual",
     },
   },
   {
@@ -50,7 +47,6 @@ export const capabilities: Capability[] = [
       image: "",
       video: "",
       placeholder: "Video Productions",
-      placeholderNote: "Project visual",
     },
   },
   {
@@ -61,7 +57,6 @@ export const capabilities: Capability[] = [
       image: "",
       video: "",
       placeholder: "Interactive Games",
-      placeholderNote: "Project visual",
     },
   },
   {
@@ -72,7 +67,6 @@ export const capabilities: Capability[] = [
       image: "",
       video: "",
       placeholder: "Digital Avatars",
-      placeholderNote: "Project visual",
     },
   },
 ];

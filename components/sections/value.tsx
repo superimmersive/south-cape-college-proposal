@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { Reveal } from "@/components/reveal";
 import { Section } from "@/components/section";
 import { collegeValue } from "@/content/proposal";
+import { withBase } from "@/lib/base-path";
 
 export function Value() {
   return (
@@ -26,12 +26,10 @@ export function Value() {
           >
             {item.image && (
               <>
-                <Image
-                  src={item.image}
+                <img
+                  src={withBase(item.image)}
                   alt=""
-                  fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                  className={`object-cover transition-transform duration-700 group-hover:scale-[1.03] ${
+                  className={`absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] ${
                     item.imageBrightness === 0.45
                       ? "brightness-[0.45]"
                       : item.imageBrightness === 0.8
