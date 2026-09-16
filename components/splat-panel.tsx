@@ -30,7 +30,7 @@ type GaussianModule = {
   SplatLoader: {
     loadFromFileData: (
       buffer: ArrayBuffer,
-      ...args: number[]
+      ...args: (number | boolean)[]
     ) => Promise<unknown>;
   };
 };
