@@ -1,10 +1,10 @@
 # Statement of Work
 
-## EV Motor Component Identification — Proof of Concept
+## EV Motor Component Replacement — Proof of Concept
 
 **Client:** South Cape College
 **Supplier:** Superimmersive
-**Project:** EV Motor Component Identification Proof of Concept
+**Project:** EV Motor Inspection and Component Replacement Proof of Concept
 **Target Platform:** Meta Quest 3
 **Development Period:** 3 Weeks
 **Project Fee:** R85,000
@@ -13,11 +13,11 @@
 
 # 1. Project Overview
 
-Superimmersive will develop a **3-week Proof of Concept (POC)** demonstrating component identification of an electric motor system.
+Superimmersive will develop a **3-week Proof of Concept (POC)** demonstrating an interactive **EV motor inspection and component-replacement exercise** on **Meta Quest 3**.
 
-The learner will use an expand slider to reveal motor parts, then click or select a part to view a short description accompanied by voice-over. This follows the same interaction pattern as the tool-assembly identification POC.
+The learner will explore an interactive 3D EV motor, expand it to inspect internal components with descriptions and voice-over, then complete a guided maintenance task: disassemble the motor using supplied virtual tools, replace a specified component and reassemble it in the correct sequence.
 
-The POC is intentionally limited in scope and should not be considered a complete EV battery, motor and safety training system.
+The POC is intentionally limited in scope and should not be considered a complete EV maintenance or diagnostic training system.
 
 ---
 
@@ -26,11 +26,13 @@ The POC is intentionally limited in scope and should not be considered a complet
 The primary objectives of the Proof of Concept are to demonstrate:
 
 - VR interaction using Meta Quest 3.
-- One electric motor represented for identification.
-- An expand slider that reveals parts.
-- Selection of individual motor parts.
-- A short written description per selected part.
-- Accompanying voice-over for the selected part.
+- One interactive 3D EV motor that can be expanded for inspection.
+- Selection of components with descriptions and voice-over explanations.
+- A guided maintenance task requiring disassembly with supplied virtual tools.
+- Identification, removal and replacement of a specified component.
+- Reassembly of the motor in the correct sequence.
+- Basic feedback when the task is completed successfully.
+- Restart and repeat of the procedure.
 
 ---
 
@@ -46,19 +48,27 @@ The proposed POC user journey is:
 
 ↓
 
-**Expand the Motor with the Slider**
+**Explore and Expand the Motor**
 
 ↓
 
-**Select a Part**
+**Inspect Components (Description and Voice-Over)**
 
 ↓
 
-**Read Description and Hear Voice-Over**
+**Receive Guided Maintenance Task**
 
 ↓
 
-**Collapse / Repeat**
+**Disassemble, Replace Specified Component and Reassemble**
+
+↓
+
+**Review Basic Feedback**
+
+↓
+
+**Restart / Repeat**
 
 ---
 
@@ -66,37 +76,42 @@ The proposed POC user journey is:
 
 ## 4.1 Training Environment
 
-A focused VR view of a single electric motor, sufficient for component identification.
+A focused VR view of a single EV motor system, sufficient for inspection and one defined replacement exercise.
 
-## 4.2 Expand Slider
+## 4.2 Expand / Inspect
 
-A slider control that expands the motor to reveal its parts and can collapse it again.
+The learner can expand the motor to inspect internal components, then select components to view descriptions and hear voice-over explanations.
 
-## 4.3 Part Selection
+## 4.3 Guided Maintenance Task
 
-The learner can click or select an individual revealed part.
+The learner receives a guided task requiring disassembly of the motor using supplied virtual tools.
 
-## 4.4 Description and Voice-Over
+## 4.4 Replacement
 
-Each selectable part has a short written description and an accompanying voice-over.
+The learner identifies and removes a specified component and replaces it with a supplied replacement part.
 
-## 4.5 Reset / Collapse
+## 4.5 Reassembly
 
-The motor can be returned to its assembled view.
+The learner reassembles the motor in the correct sequence for this defined exercise.
+
+## 4.6 Feedback and Reset
+
+Basic feedback is given when the task is completed successfully. The learner can restart and repeat the procedure.
 
 ---
 
 # 5. Voice / Instruction
 
-Part-level voice-over for selected motor components is included. HV safety certification content is not included.
+Part-level voice-over for selected motor components is included, together with simple prompts for the guided replacement task. High-voltage safety certification content is not included.
 
 ---
 
 # 6. Deliverables
 
-- A Meta Quest 3 demonstration of EV motor component identification.
-- Expand-slider interaction with part selection, text and voice-over.
-- Internal testing of the identify / collapse flow.
+- A Meta Quest 3 demonstration of EV motor inspection, disassembly and component replacement.
+- Expand / inspect interaction with descriptions and voice-over.
+- One defined component replacement exercise as described in this SOW.
+- Internal testing of inspect, replace, reassemble and reset flow.
 - A demonstration to College staff.
 
 ---
@@ -105,9 +120,11 @@ Part-level voice-over for selected motor components is included. HV safety certi
 
 The following are excluded from the POC unless separately agreed:
 
+- Additional maintenance procedures beyond the defined exercise.
 - Battery systems.
-- High-voltage safety procedures.
-- Full EV powertrain operation.
+- Diagnostics.
+- High-voltage safety.
+- Fault-finding exercises.
 - Multiple motor types.
 - LMS integration.
 
@@ -117,18 +134,17 @@ The following are excluded from the POC unless separately agreed:
 
 The POC is planned as a focused **3-week** development period.
 
-## Week 1 - Motor & Slider
+## Week 1 - Motor, Expand and Inspect
 
-Single motor model, explode / expand slider and framing.
+Single motor model, expand interaction, selectable parts, descriptions and voice-over hooks.
 
-## Week 2 - Part Inspection
+## Week 2 - Replacement Exercise
 
-Selectable parts, written descriptions and voice-over hooks.
+Virtual tools, guided disassembly, specified-component replacement and reassembly sequence.
 
 ## Week 3 - Testing & Refinement
 
-Pacing, audio, collapse / reset and demonstration polish.
-
+Feedback, restart, pacing and demonstration polish.
 
 ---
 
@@ -206,11 +222,12 @@ The POC will be considered successfully delivered when the agreed core functiona
 The demonstration should include:
 
 - Learner entering the VR environment.
-- Learner expanding the motor with the slider.
-- Learner selecting a part.
-- A written description being shown.
-- An accompanying voice-over playing.
-- The motor collapsing back to an assembled view.
+- Learner expanding the motor and inspecting components with description and voice-over.
+- Learner receiving a guided maintenance task.
+- Learner disassembling the motor with supplied virtual tools.
+- Learner replacing the specified component and reassembling the motor.
+- Basic completion feedback.
+- Restart and repeat of the exercise.
 
 The POC is intended to demonstrate technical feasibility and core interaction rather than final production quality.
 
@@ -240,10 +257,12 @@ The POC provides a technical foundation that may be expanded into a more compreh
 
 Potential future development could include:
 
-- EV components.
+- Additional maintenance procedures.
 - Battery systems.
-- Motor systems in greater depth.
-- Safety procedures.
+- Electric motor systems in greater depth.
+- Diagnostics.
+- High-voltage safety.
+- Fault-finding exercises.
 
 Any future development will be subject to a separate scope, timeline and commercial agreement.
 
@@ -303,4 +322,3 @@ By approving this Statement of Work, both parties acknowledge and agree to the s
 **Signature:** ______________________________
 
 **Date:** ___________________________________
-

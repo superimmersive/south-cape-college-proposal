@@ -48,7 +48,7 @@ export const pocProcess = [
 
 export const pocNotes = [
   "The selected concept will first be refined into a clearly defined Proof of Concept scope, including the core functionality, interactions and intended learning outcomes.",
-  "A standard Proof of Concept is expected to take approximately 2–3 weeks to develop, at a fixed development cost of R85,000.",
+  "A standard Proof of Concept is expected to take approximately 3 weeks to develop, at a fixed development cost of R85,000.",
   "The final POC scope will be agreed before development begins to ensure that the project remains focused and achievable within the agreed timeline and budget.",
   "Any hardware or specialist equipment required for the selected POC will be assessed separately and quoted independently from the software development.",
   "The POC is intended to demonstrate the core concept, interaction and educational potential of the proposed solution. It should not be considered a complete production-ready training system unless specifically agreed as part of the scope.",

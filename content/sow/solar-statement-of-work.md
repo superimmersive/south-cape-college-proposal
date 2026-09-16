@@ -1,10 +1,10 @@
 # Statement of Work
 
-## Solar Generation — Proof of Concept
+## Solar Generation & System Configuration — Proof of Concept
 
 **Client:** South Cape College
 **Supplier:** Superimmersive
-**Project:** Solar Generation Proof of Concept
+**Project:** Solar Generation and Panel Configuration Proof of Concept
 **Target Platform:** Meta Quest 3
 **Development Period:** 3 Weeks
 **Project Fee:** R85,000
@@ -13,11 +13,11 @@
 
 # 1. Project Overview
 
-Superimmersive will develop a **3-week Proof of Concept (POC)** demonstrating solar generation.
+Superimmersive will develop a **3-week Proof of Concept (POC)** demonstrating an interactive **solar generation and system configuration experience** on **Meta Quest 3**.
 
-The learner will observe an animated conversion of solar energy into electrical energy, control the sun to represent different times of day, and switch between Sunny and Cloudy conditions to see the effect on generation.
+The learner will explore a simplified solar generation system, identify key components, adjust the orientation and angle of a solar panel, control simulated sun position and weather, and observe generation output responding to those changes.
 
-The POC is intentionally limited in scope and should not be considered a complete solar systems, storage and configuration training module.
+The POC is intentionally limited in scope and should not be considered a complete solar installation, electrical configuration, storage or energy-management training system.
 
 ---
 
@@ -26,11 +26,14 @@ The POC is intentionally limited in scope and should not be considered a complet
 The primary objectives of the Proof of Concept are to demonstrate:
 
 - VR interaction using Meta Quest 3.
-- A simplified solar generation view.
-- An animated solar-to-electrical conversion.
-- Learner control of sun / time of day.
-- Sunny and Cloudy conditions.
-- A simple generation output that responds to those conditions.
+- A simplified solar generation system with identifiable key components.
+- Adjustment of solar-panel orientation and angle.
+- Learner control of simulated sun position / time of day.
+- Sunny and Cloudy weather conditions.
+- Observation of sunlight reaching the panel and conversion into electrical energy.
+- A simplified generation / output indicator that responds to panel orientation, sun position and weather.
+- Experimentation with different configurations and comparison of resulting generation.
+- Reset and repeat of the exercise.
 
 ---
 
@@ -46,19 +49,23 @@ The proposed POC user journey is:
 
 ↓
 
-**Observe Generation Animation**
+**Explore the System and Identify Key Components**
 
 ↓
 
-**Control Sun / Time of Day**
+**Adjust Panel Orientation and Angle**
 
 ↓
 
-**Switch Sunny / Cloudy**
+**Control Sun Position and Weather**
 
 ↓
 
-**Review Output Change**
+**Observe Generation Output Change**
+
+↓
+
+**Compare Configurations**
 
 ↓
 
@@ -70,23 +77,27 @@ The proposed POC user journey is:
 
 ## 4.1 Training Environment
 
-A focused VR view of a simplified solar generation setup.
+A focused VR view of a simplified solar generation setup with identifiable key components.
 
-## 4.2 Generation Animation
+## 4.2 Panel Configuration
 
-An animated representation of solar energy converting into electrical energy.
+The learner can adjust the orientation and angle of a solar panel.
 
-## 4.3 Sun Control
+## 4.3 Sun and Weather
 
-The learner can control sun position / time of day and see generation respond.
+The learner can control simulated sun position to represent different times of day, and switch between Sunny and Cloudy conditions.
 
-## 4.4 Weather Conditions
+## 4.4 Generation Observation
 
-Sunny and Cloudy conditions that affect generation.
+The learner can observe sunlight reaching the solar panels and a simplified conversion into electrical energy.
 
-## 4.5 Output Readout
+## 4.5 Output Indicator
 
-A simple indication of generated output. Storage, inverters and full system configuration are not included.
+A simplified generation / output indicator responds to changes in panel orientation, sun position and weather.
+
+## 4.6 Reset
+
+The learner can reset the system and repeat the exercise.
 
 ---
 
@@ -98,9 +109,9 @@ Simple on-screen or spoken prompts. No full systems-theory lecture is included.
 
 # 6. Deliverables
 
-- A Meta Quest 3 demonstration of solar generation under changing sun and weather conditions.
-- The core generation interaction described in this SOW.
-- Internal testing of sun / weather response.
+- A Meta Quest 3 demonstration of solar generation and panel configuration.
+- Panel orientation / angle control, sun / weather control and a responding generation indicator as described in this SOW.
+- Internal testing of configuration response and reset flow.
 - A demonstration to College staff.
 
 ---
@@ -109,9 +120,11 @@ Simple on-screen or spoken prompts. No full systems-theory lecture is included.
 
 The following are excluded from the POC unless separately agreed:
 
-- Solar storage.
-- Full system configuration.
-- Grid-tie, inverters or detailed electrical design.
+- Multiple solar panels or array configuration.
+- Inverters, battery storage or electrical connections.
+- System sizing.
+- Fault finding and maintenance.
+- Grid-tie or detailed electrical design.
 - LMS integration.
 
 ---
@@ -120,18 +133,17 @@ The following are excluded from the POC unless separately agreed:
 
 The POC is planned as a focused **3-week** development period.
 
-## Week 1 - Environment & Sun
+## Week 1 - Environment, Components and Panel
 
-Solar view, sun control and a simple generation readout.
+Solar view, identifiable components and panel orientation / angle control.
 
-## Week 2 - Conditions & Animation
+## Week 2 - Sun, Weather and Output
 
-Sunny / Cloudy states and conversion animation tied to output.
+Sun position, Sunny / Cloudy conditions, conversion observation and generation indicator.
 
 ## Week 3 - Testing & Refinement
 
-Pacing, prompts, reset and demonstration polish.
-
+Comparison of configurations, reset, prompts and demonstration polish.
 
 ---
 
@@ -209,10 +221,11 @@ The POC will be considered successfully delivered when the agreed core functiona
 The demonstration should include:
 
 - Learner entering the VR environment.
-- Learner observing the generation animation.
-- Learner controlling the sun / time of day.
-- Learner switching Sunny / Cloudy conditions.
-- Generation output changing in response.
+- Learner exploring the system and identifying key components.
+- Learner adjusting panel orientation and angle.
+- Learner controlling sun position and switching Sunny / Cloudy conditions.
+- Generation output responding to those changes.
+- Reset and repeat of the exercise.
 
 The POC is intended to demonstrate technical feasibility and core interaction rather than final production quality.
 
@@ -242,10 +255,11 @@ The POC provides a technical foundation that may be expanded into a more compreh
 
 Potential future development could include:
 
-- Solar systems.
-- Storage.
-- System configuration.
-- Guided exercises and assessment.
+- Multiple solar panels and array configuration.
+- Inverters, battery storage and electrical connections.
+- System sizing.
+- Fault finding and maintenance.
+- More advanced solar-energy scenarios.
 
 Any future development will be subject to a separate scope, timeline and commercial agreement.
 
@@ -305,4 +319,3 @@ By approving this Statement of Work, both parties acknowledge and agree to the s
 **Signature:** ______________________________
 
 **Date:** ___________________________________
-

@@ -1,6 +1,6 @@
 # Statement of Work
 
-## Customer Service Calling — Proof of Concept
+## AI Voice Customer-Service Call — Proof of Concept
 
 **Client:** South Cape College
 **Supplier:** Superimmersive

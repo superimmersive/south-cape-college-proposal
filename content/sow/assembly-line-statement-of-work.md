@@ -4,7 +4,7 @@
 
 **Client:** South Cape College
 **Supplier:** Superimmersive
-**Project:** Virtual Assembly-Line Sorting Proof of Concept
+**Project:** Virtual Assembly-Line Assembly and Sorting Proof of Concept
 **Target Platform:** Meta Quest 3
 **Development Period:** 3 Weeks
 **Project Fee:** R85,000
@@ -13,11 +13,11 @@
 
 # 1. Project Overview
 
-Superimmersive will develop a **3-week Proof of Concept (POC)** demonstrating a simplified virtual assembly-line that sorts different object types.
+Superimmersive will develop a **3-week Proof of Concept (POC)** demonstrating a virtual assembly-line sorting system on **Meta Quest 3**.
 
-The learner will add objects of different types onto the line. The line will convey those objects and sort them to matching destinations.
+The learner will enter a virtual assembly-line environment, assemble a simplified separator system from provided components using visual ghosted guides, place objects onto the conveyor, start the line and observe objects being sorted to matching destinations.
 
-The purpose of the POC is to demonstrate the potential of immersive technology as a supplementary training tool and establish a technical foundation that can later include pneumatics, process sequencing, system operation and fault finding.
+The purpose of the POC is to demonstrate the potential of immersive technology as a supplementary training tool and establish a technical foundation that can later include unguided assembly assessment, pneumatics, PLC wiring, process sequencing and fault finding.
 
 The POC is intentionally limited in scope and should not be considered a complete production-ready assembly-line or pneumatics training system.
 
@@ -28,11 +28,14 @@ The POC is intentionally limited in scope and should not be considered a complet
 The primary objectives of the Proof of Concept are to demonstrate:
 
 - VR interaction using Meta Quest 3.
-- Adding different types of objects to a virtual assembly-line.
-- A simplified conveyor / sorting process.
-- Destination routing by object type.
-- Basic correct / incorrect sort feedback.
-- Reset and repeat of the sorting exercise.
+- A virtual assembly-line environment containing the required components.
+- Selection of components from an interactive UI menu.
+- Guided assembly of a simplified separator system using visual ghosted guides.
+- Placement of different object types onto the conveyor.
+- Starting the conveyor and observing the sorting process.
+- Objects being directed to corresponding destinations.
+- Basic feedback based on the sorting outcome.
+- Reset and repeat of the exercise.
 
 ---
 
@@ -48,15 +51,19 @@ The proposed POC user journey is:
 
 ↓
 
-**Add Objects to the Line**
+**Select Components from the UI Menu**
 
 ↓
 
-**Watch Conveying and Sorting**
+**Assemble the Separator Using Ghosted Guides**
 
 ↓
 
-**Observe Destinations by Type**
+**Place Objects onto the Conveyor**
+
+↓
+
+**Start the Conveyor and Observe Sorting**
 
 ↓
 
@@ -72,39 +79,49 @@ The proposed POC user journey is:
 
 ## 4.1 Training Environment
 
-A focused VR environment representing a simplified assembly-line, sufficient to demonstrate the sorting interaction.
+A focused VR environment representing a simplified assembly-line with the components required for the exercise.
 
 The environment is not intended to be a complete digital twin of the College's physical pneumatic models.
 
-## 4.2 Object Types
+## 4.2 Component Menu
 
-A small, clearly distinguishable set of object types that the learner can add to the line.
+An interactive UI menu from which the learner can select the components needed to assemble the simplified separator system.
 
-## 4.3 Sorting Behaviour
+## 4.3 Guided Assembly
 
-The line will convey objects and sort them according to type, directing each type toward a matching destination.
+The learner assembles a simplified separator system. Visual ghosted guides indicate where each component should be positioned.
 
-## 4.4 Feedback
+Unguided assembly, sequence scoring and independent assembly assessment are out of scope.
 
-Basic visual and/or audio feedback when an object is sorted correctly or incorrectly.
+## 4.4 Object Types and Placement
 
-## 4.5 Reset
+A small, clearly distinguishable set of object types that the learner can place onto the conveyor.
 
-The learner can reset the line and run the exercise again.
+## 4.5 Sorting Behaviour
+
+The learner starts the conveyor. The line conveys objects and sorts them according to type, directing each type toward a matching destination.
+
+## 4.6 Feedback
+
+Basic visual and/or audio feedback based on the sorting outcome.
+
+## 4.7 Reset
+
+The learner can reset the system and repeat the exercise.
 
 ---
 
 # 5. Voice / Instruction
 
-Simple on-screen or spoken prompts to start, add objects and reset. No full curriculum voice script is included.
+Simple on-screen or spoken prompts to start, assemble, place objects and reset. No full curriculum voice script is included.
 
 ---
 
 # 6. Deliverables
 
-- A Meta Quest 3 demonstration of the sorting POC.
-- The core assembly-line sorting interaction described in this SOW.
-- Internal testing of the sorting behaviour and reset flow.
+- A Meta Quest 3 demonstration of the assembly and sorting POC.
+- The guided separator assembly and sorting interaction described in this SOW.
+- Internal testing of assembly, sorting behaviour and reset flow.
 - A demonstration to College staff.
 
 ---
@@ -113,10 +130,12 @@ Simple on-screen or spoken prompts to start, add objects and reset. No full curr
 
 The following are excluded from the POC unless separately agreed:
 
+- Unguided assembly assessment without visual guides.
 - Pneumatic system interaction.
+- PLC wiring and configuration.
 - Process sequencing of a full production line.
-- System operation of physical College equipment.
 - Fault finding.
+- Advanced assessment of assembly accuracy, sequence or completion time.
 - A complete digital twin of existing pneumatic scale models.
 - LMS integration, scoring dashboards or multiplayer.
 
@@ -126,18 +145,17 @@ The following are excluded from the POC unless separately agreed:
 
 The POC is planned as a focused **3-week** development period.
 
-## Week 1 - Environment & Objects
+## Week 1 - Environment, Components & Guides
 
-Block-out of the line, destinations and a small set of object types. Basic add-to-line interaction.
+Block-out of the line, destinations, component menu and ghosted assembly guides. Basic place-and-assemble interaction.
 
 ## Week 2 - Sorting Behaviour
 
-Conveying, type-based routing and correct / incorrect feedback.
+Object placement, conveying, type-based routing and correct / incorrect feedback.
 
 ## Week 3 - Testing & Refinement
 
 Reset flow, pacing, instruction prompts and demonstration polish within the agreed scope.
-
 
 ---
 
@@ -215,9 +233,11 @@ The POC will be considered successfully delivered when the agreed core functiona
 The demonstration should include:
 
 - Learner entering the VR environment.
-- Learner adding different object types to the line.
-- Objects being conveyed and sorted by type.
-- Basic feedback for sort outcome.
+- Learner selecting components from the UI menu.
+- Learner assembling the simplified separator using ghosted guides.
+- Learner placing different object types onto the conveyor.
+- Learner starting the conveyor and observing sorting by type.
+- Basic feedback for the sorting outcome.
 - Reset and repeat of the exercise.
 
 The POC is intended to demonstrate technical feasibility and core interaction rather than final production quality.
@@ -248,12 +268,13 @@ The POC provides a technical foundation that may be expanded into a more compreh
 
 Potential future development could include:
 
-- Pneumatic system interaction.
-- Process sequencing.
-- System operation.
-- Fault finding.
-- Closer digital extension of existing physical training equipment.
-- Assessment and learner progress tracking.
+- Unguided assembly assessment — learners assemble independently without visual guides, with the application tracking the assembly sequence and identifying errors.
+- Pneumatic system interaction — learners interact with pneumatic components and observe how they influence system operation.
+- PLC wiring and configuration — learners connect PLC inputs and outputs to the correct nodes and configure the system to operate according to the required logic.
+- Process sequencing — learners complete assembly and operational procedures in the correct sequence.
+- Fault finding — learners identify and resolve simulated faults within the assembly-line or pneumatic system.
+- Advanced assessment — learner performance assessed on assembly accuracy, sequence, completion time and successful system operation.
+- Physical equipment extension — the virtual experience developed around and extended from the College's existing physical assembly-line and pneumatic training equipment.
 
 Any future development will be subject to a separate scope, timeline and commercial agreement.
 
@@ -313,4 +334,3 @@ By approving this Statement of Work, both parties acknowledge and agree to the s
 **Signature:** ______________________________
 
 **Date:** ___________________________________
-

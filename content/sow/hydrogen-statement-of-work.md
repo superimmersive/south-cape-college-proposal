@@ -1,10 +1,10 @@
 # Statement of Work
 
-## Hydrogen Electrolyser — Proof of Concept
+## Electrolyser Operation & Hydrogen Production — Proof of Concept
 
 **Client:** South Cape College
 **Supplier:** Superimmersive
-**Project:** Hydrogen Electrolyser Proof of Concept
+**Project:** Electrolyser Operation and Hydrogen Production Proof of Concept
 **Target Platform:** Meta Quest 3
 **Development Period:** 3 Weeks
 **Project Fee:** R85,000
@@ -13,11 +13,11 @@
 
 # 1. Project Overview
 
-Superimmersive will develop a **3-week Proof of Concept (POC)** demonstrating an animated electrolyser simulation.
+Superimmersive will develop a **3-week Proof of Concept (POC)** demonstrating an interactive **electrolyser operation and hydrogen-production simulation** on **Meta Quest 3**.
 
-The learner will observe how hydrogen is produced through electrolysis: electrical energy splits water into hydrogen and oxygen in a simplified training view.
+The learner will explore a simplified electrolyser, identify key components, prepare the system, start electrolysis, observe water separating into hydrogen and oxygen, adjust a simplified operating input such as power, then shut down and reset the system.
 
-The POC is intentionally limited in scope and should not be considered a complete hydrogen fuel-cell, plant-procedure or energy-production training system.
+The POC is intentionally limited in scope and should not be considered a complete industrial electrolyser, hydrogen plant or process-control training system.
 
 ---
 
@@ -26,11 +26,14 @@ The POC is intentionally limited in scope and should not be considered a complet
 The primary objectives of the Proof of Concept are to demonstrate:
 
 - VR interaction using Meta Quest 3.
-- A simplified electrolyser representation.
-- An animated hydrogen-production process.
-- Start, pause and reset of the simulation.
-- An optional simple input such as power on/off.
-- A clearly educational, not industrial-plant, presentation of electrolysis.
+- A simplified electrolyser system with identifiable key components.
+- Inspection of components with short explanations of their purpose.
+- Preparation of the system by confirming water supply and activating electrical input.
+- Starting the electrolysis process.
+- An animated representation of water separating into hydrogen and oxygen.
+- Movement of hydrogen and oxygen toward their respective outputs.
+- Adjustment of a simplified operating input, such as power, and observation of its effect on simulated production rate.
+- Shutdown, reset and repeat of the basic operating sequence.
 
 ---
 
@@ -46,19 +49,27 @@ The proposed POC user journey is:
 
 ↓
 
-**Start the Electrolyser Simulation**
+**Explore the System and Inspect Components**
 
 ↓
 
-**Observe Production Stages**
+**Prepare the System (Water Supply and Electrical Input)**
 
 ↓
 
-**Optionally Toggle Power**
+**Start Electrolysis**
 
 ↓
 
-**Pause / Reset / Repeat**
+**Observe Hydrogen and Oxygen Production**
+
+↓
+
+**Adjust Power and Observe Production Rate**
+
+↓
+
+**Shut Down / Reset / Repeat**
 
 ---
 
@@ -66,37 +77,41 @@ The proposed POC user journey is:
 
 ## 4.1 Training Environment
 
-A focused VR view of a simplified electrolyser.
+A focused VR view of a simplified electrolyser with identifiable key components.
 
-## 4.2 Process Animation
+## 4.2 Component Inspection
 
-An animated sequence showing water and electrical energy producing hydrogen (and oxygen) in a training-appropriate simplification.
+The learner can inspect components to view short explanations of their purpose.
 
-## 4.3 Playback Control
+## 4.3 System Preparation
 
-The learner can start, pause and reset the simulation.
+The learner prepares the system by confirming the water supply and activating the electrical input.
 
-## 4.4 Simple Input
+## 4.4 Electrolysis Process
 
-An optional control such as power on/off so the learner can see production respond.
+The learner starts electrolysis and observes water being separated into hydrogen and oxygen through an animated representation, with hydrogen and oxygen moving toward their respective outputs.
 
-## 4.5 Educational Limit
+## 4.5 Operating Input
 
-The simulation is conceptual. It is not a plant operating procedure, safety certification, or a fuel-cell energy-production module.
+The learner can adjust a simplified operating input, such as power, and observe its effect on the simulated production rate.
+
+## 4.6 Shutdown and Reset
+
+The learner can shut down and reset the system, then repeat the process to reinforce the basic operating sequence.
 
 ---
 
 # 5. Voice / Instruction
 
-Simple on-screen or spoken prompts describing the electrolysis stages. No full plant-safety briefing is included.
+Simple on-screen or spoken prompts describing preparation, electrolysis stages and shutdown. No full plant-safety briefing is included.
 
 ---
 
 # 6. Deliverables
 
-- A Meta Quest 3 demonstration of an electrolyser / hydrogen-production animation.
-- Start, pause, reset and optional power input as described in this SOW.
-- Internal testing of the simulation playback.
+- A Meta Quest 3 demonstration of electrolyser operation and hydrogen production.
+- Component inspection, system preparation, process animation, power input and shutdown / reset as described in this SOW.
+- Internal testing of the operating sequence.
 - A demonstration to College staff.
 
 ---
@@ -105,10 +120,12 @@ Simple on-screen or spoken prompts describing the electrolysis stages. No full p
 
 The following are excluded from the POC unless separately agreed:
 
-- Hydrogen fuel-cell energy production (hydrogen in, electricity out).
-- Industrial plant procedures.
-- Safety certification.
-- High-pressure storage systems.
+- Detailed industrial electrolyser operation.
+- Safety procedures and process controls.
+- Hydrogen storage and compression.
+- Fuel-cell systems.
+- Broader hydrogen-energy production workflows.
+- Industrial plant procedures or certification.
 - LMS integration.
 
 ---
@@ -117,18 +134,17 @@ The following are excluded from the POC unless separately agreed:
 
 The POC is planned as a focused **3-week** development period.
 
-## Week 1 - Electrolyser View
+## Week 1 - Electrolyser View and Inspection
 
-Simplified electrolyser representation and playback controls.
+Simplified electrolyser representation, identifiable components and inspection explanations.
 
-## Week 2 - Process Animation
+## Week 2 - Operating Sequence
 
-Staged animation of electrolysis and optional power on/off.
+Preparation, start, hydrogen / oxygen animation, power input and production-rate response.
 
 ## Week 3 - Testing & Refinement
 
-Prompts, reset and demonstration polish.
-
+Shutdown, reset, prompts and demonstration polish.
 
 ---
 
@@ -206,10 +222,11 @@ The POC will be considered successfully delivered when the agreed core functiona
 The demonstration should include:
 
 - Learner entering the VR environment.
-- Learner starting the electrolyser simulation.
-- The animation showing a simplified hydrogen-production process.
-- Learner pausing and resetting the simulation.
-- Optional power input affecting the simulation where included.
+- Learner exploring the electrolyser and inspecting components.
+- Learner preparing the system (water supply and electrical input).
+- Learner starting electrolysis and observing hydrogen and oxygen production.
+- Learner adjusting a simplified input such as power and seeing production rate respond.
+- Learner shutting down, resetting and repeating the sequence.
 
 The POC is intended to demonstrate technical feasibility and core interaction rather than final production quality.
 
@@ -239,10 +256,12 @@ The POC provides a technical foundation that may be expanded into a more compreh
 
 Potential future development could include:
 
-- Electrolysis / hydrogen production in greater depth.
-- Hydrogen fuel-cell systems.
-- Energy production.
-- Guided exercises and assessment.
+- More detailed electrolyser operation and system components.
+- Safety procedures and process controls.
+- Fault finding.
+- Hydrogen storage and compression.
+- Fuel-cell systems.
+- Broader hydrogen-energy production workflows.
 
 Any future development will be subject to a separate scope, timeline and commercial agreement.
 
@@ -302,4 +321,3 @@ By approving this Statement of Work, both parties acknowledge and agree to the s
 **Signature:** ______________________________
 
 **Date:** ___________________________________
-

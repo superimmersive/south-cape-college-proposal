@@ -1,10 +1,10 @@
 # Statement of Work
 
-## Tool Component Identification — Proof of Concept
+## Tool Component Identification & Replacement — Proof of Concept
 
 **Client:** South Cape College
 **Supplier:** Superimmersive
-**Project:** Tool Component Identification Proof of Concept
+**Project:** Tool Component Identification and Replacement Proof of Concept
 **Target Platform:** Meta Quest 3
 **Development Period:** 3 Weeks
 **Project Fee:** R85,000
@@ -13,11 +13,11 @@
 
 # 1. Project Overview
 
-Superimmersive will develop a **3-week Proof of Concept (POC)** demonstrating component identification of a single tool.
+Superimmersive will develop a **3-week Proof of Concept (POC)** demonstrating an interactive **tool component identification and replacement exercise** on **Meta Quest 3**.
 
-The learner will use an expand slider to reveal parts, then click or select a part to view a short description accompanied by voice-over.
+The learner will explore an interactive 3D tool, expand it to reveal internal components, inspect those components with descriptions and voice-over, then complete a guided maintenance task: disassemble the tool, replace a specified component and reassemble it in the correct sequence.
 
-The POC is intentionally limited in scope and should not be considered a complete assembly and disassembly training system.
+The POC is intentionally limited in scope and should not be considered a complete tool maintenance, assembly or disassembly training system.
 
 ---
 
@@ -26,11 +26,14 @@ The POC is intentionally limited in scope and should not be considered a complet
 The primary objectives of the Proof of Concept are to demonstrate:
 
 - VR interaction using Meta Quest 3.
-- One tool represented for identification.
-- An expand slider that reveals parts.
-- Selection of individual parts.
-- A short written description per selected part.
-- Accompanying voice-over for the selected part.
+- One interactive 3D tool that can be expanded to reveal internal components.
+- Selection of components with short descriptions and accompanying voice-over.
+- A guided maintenance task identifying a specified component.
+- Disassembly using supplied virtual tools.
+- Removal of the specified component and replacement with a supplied part.
+- Reassembly in the correct sequence.
+- Basic feedback when the task is completed.
+- Restart and repeat of the exercise.
 
 ---
 
@@ -46,19 +49,27 @@ The proposed POC user journey is:
 
 ↓
 
-**Expand the Tool with the Slider**
+**Explore and Expand the Tool**
 
 ↓
 
-**Select a Part**
+**Inspect Components (Description and Voice-Over)**
 
 ↓
 
-**Read Description and Hear Voice-Over**
+**Receive Guided Maintenance Task**
 
 ↓
 
-**Collapse / Repeat**
+**Disassemble, Replace Specified Component and Reassemble**
+
+↓
+
+**Review Basic Feedback**
+
+↓
+
+**Restart / Repeat**
 
 ---
 
@@ -66,37 +77,42 @@ The proposed POC user journey is:
 
 ## 4.1 Training Environment
 
-A focused VR view of a single tool, sufficient for component identification.
+A focused VR view of a single tool, sufficient for identification and one defined replacement exercise.
 
-## 4.2 Expand Slider
+## 4.2 Expand / Inspect
 
-A slider control that expands the tool to reveal its parts and can collapse it again.
+The learner can expand the tool to reveal internal components, then select components to view short descriptions and hear accompanying voice-over.
 
-## 4.3 Part Selection
+## 4.3 Guided Maintenance Task
 
-The learner can click or select an individual revealed part.
+The learner receives a guided task identifying a specified component to replace.
 
-## 4.4 Description and Voice-Over
+## 4.4 Disassembly and Replacement
 
-Each selectable part has a short written description and an accompanying voice-over.
+The learner uses supplied virtual tools to disassemble the tool, locate and remove the specified component, and replace it with a supplied replacement component.
 
-## 4.5 Reset / Collapse
+## 4.5 Reassembly
 
-The tool can be returned to its assembled view.
+The learner reassembles the tool in the correct sequence for this defined exercise.
+
+## 4.6 Feedback and Reset
+
+Basic feedback is given when the task is completed. The learner can restart and repeat the exercise.
 
 ---
 
 # 5. Voice / Instruction
 
-Part-level voice-over for selected components is included. A full instructional curriculum soundtrack is not included.
+Part-level voice-over for selected components is included, together with simple prompts for the guided replacement task. A full instructional curriculum soundtrack is not included.
 
 ---
 
 # 6. Deliverables
 
-- A Meta Quest 3 demonstration of tool component identification.
-- Expand-slider interaction with part selection, text and voice-over.
-- Internal testing of the identify / collapse flow.
+- A Meta Quest 3 demonstration of tool component identification and replacement.
+- Expand / inspect interaction with descriptions and voice-over.
+- One defined component replacement exercise as described in this SOW.
+- Internal testing of inspect, replace, reassemble and reset flow.
 - A demonstration to College staff.
 
 ---
@@ -105,10 +121,12 @@ Part-level voice-over for selected components is included. A full instructional 
 
 The following are excluded from the POC unless separately agreed:
 
-- Full assembly sequences.
-- Full disassembly procedures.
-- Multiple tools.
-- Torque, fasteners or timed assessments.
+- Additional tools or additional replacement components beyond the defined exercise.
+- Multiple assembly and disassembly procedures.
+- Unguided exercises without task prompts.
+- Fault finding.
+- Broader maintenance procedures.
+- Learner assessment dashboards.
 - LMS integration.
 
 ---
@@ -117,18 +135,17 @@ The following are excluded from the POC unless separately agreed:
 
 The POC is planned as a focused **3-week** development period.
 
-## Week 1 - Tool & Slider
+## Week 1 - Tool, Expand and Inspect
 
-Single tool model, explode / expand slider and camera framing.
+Single tool model, expand interaction, selectable parts, descriptions and voice-over hooks.
 
-## Week 2 - Part Inspection
+## Week 2 - Replacement Exercise
 
-Selectable parts, written descriptions and voice-over hooks.
+Virtual tools, guided disassembly, specified-component replacement and reassembly sequence.
 
 ## Week 3 - Testing & Refinement
 
-Pacing, audio, collapse / reset and demonstration polish.
-
+Feedback, restart, pacing and demonstration polish.
 
 ---
 
@@ -206,11 +223,12 @@ The POC will be considered successfully delivered when the agreed core functiona
 The demonstration should include:
 
 - Learner entering the VR environment.
-- Learner expanding the tool with the slider.
-- Learner selecting a part.
-- A written description being shown.
-- An accompanying voice-over playing.
-- The tool collapsing back to an assembled view.
+- Learner expanding the tool and inspecting components with description and voice-over.
+- Learner receiving a guided maintenance task for a specified component.
+- Learner disassembling the tool with supplied virtual tools.
+- Learner replacing the specified component and reassembling the tool.
+- Basic completion feedback.
+- Restart and repeat of the exercise.
 
 The POC is intended to demonstrate technical feasibility and core interaction rather than final production quality.
 
@@ -240,10 +258,12 @@ The POC provides a technical foundation that may be expanded into a more compreh
 
 Potential future development could include:
 
-- Assembly sequences.
-- Disassembly procedures.
-- Additional tools.
-- Guided exercises and assessment.
+- Additional tools and components.
+- Multiple assembly and disassembly procedures.
+- Guided and unguided exercises.
+- Fault finding.
+- Maintenance procedures.
+- Learner assessment.
 
 Any future development will be subject to a separate scope, timeline and commercial agreement.
 
@@ -303,4 +323,3 @@ By approving this Statement of Work, both parties acknowledge and agree to the s
 **Signature:** ______________________________
 
 **Date:** ___________________________________
-

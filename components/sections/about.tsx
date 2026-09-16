@@ -9,6 +9,46 @@ export function About() {
   return (
     <Section id="about" eyebrow="The company" title="About Superimmersive">
       <div className="grid gap-12 lg:grid-cols-[1fr_minmax(0,24rem)] lg:items-start lg:gap-16">
+        <Reveal delay={120} className="lg:col-start-2 lg:row-start-1 lg:sticky lg:top-28">
+          <div className="card grid grid-cols-[1fr_8rem] overflow-hidden sm:grid-cols-[1fr_10rem] lg:grid-cols-1">
+            <div
+              className="media ticks order-last rounded-none border-0 border-hair max-lg:aspect-auto max-lg:h-full max-lg:min-h-[11rem] max-lg:border-l lg:order-none lg:border-b"
+              style={{ "--ratio": "4 / 5" } as React.CSSProperties}
+            >
+              {founder.portrait ? (
+                <Image
+                  src={founder.portrait}
+                  alt={`${founder.name}, ${founder.title}`}
+                  fill
+                  sizes="(min-width: 1024px) 24rem, 10rem"
+                  className="object-cover object-[center_18%]"
+                />
+              ) : (
+                <MediaPlaceholder label={founder.name} note="Founder portrait" compact />
+              )}
+            </div>
+
+            <div className="flex flex-col justify-center p-4 sm:p-5 lg:p-7">
+              <p className="font-display text-lg tracking-tight text-fg lg:text-xl">
+                {founder.name}
+              </p>
+              <p className="label mt-1.5 lg:mt-2">{founder.title}</p>
+
+              <p className="label mt-4 mb-2.5 lg:mt-7 lg:mb-4">Capabilities</p>
+              <ul className="flex flex-wrap gap-1.5 lg:gap-2">
+                {founder.capabilities.map((capability) => (
+                  <li
+                    key={capability}
+                    className="rounded-md border border-hair px-2 py-1 text-[0.72rem] text-fg-soft lg:px-2.5 lg:py-1.5 lg:text-[0.78rem]"
+                  >
+                    {capability}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Reveal>
+
         <div className="flex flex-col gap-10">
           <div className="max-w-3xl space-y-6">
             {aboutParagraphs.map((paragraph, index) => (
@@ -57,46 +97,6 @@ export function About() {
             </div>
           </div>
         </div>
-
-        <Reveal delay={120} className="lg:sticky lg:top-28">
-          <div className="card overflow-hidden">
-            <div
-              className="media ticks rounded-none border-0 border-b border-hair"
-              style={{ "--ratio": "4 / 5" } as React.CSSProperties}
-            >
-              {founder.portrait ? (
-                <Image
-                  src={founder.portrait}
-                  alt={`${founder.name}, ${founder.title}`}
-                  fill
-                  sizes="(min-width: 1024px) 24rem, 100vw"
-                  className="object-cover"
-                />
-              ) : (
-                <MediaPlaceholder label={founder.name} note="Founder portrait" compact />
-              )}
-            </div>
-
-            <div className="p-7">
-              <p className="font-display text-xl tracking-tight text-fg">
-                {founder.name}
-              </p>
-              <p className="label mt-2">{founder.title}</p>
-
-              <p className="label mt-7 mb-4">Capabilities</p>
-              <ul className="flex flex-wrap gap-2">
-                {founder.capabilities.map((capability) => (
-                  <li
-                    key={capability}
-                    className="rounded-md border border-hair px-2.5 py-1.5 text-[0.78rem] text-fg-soft"
-                  >
-                    {capability}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </Reveal>
       </div>
     </Section>
   );

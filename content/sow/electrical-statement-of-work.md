@@ -1,10 +1,10 @@
 # Statement of Work
 
-## Virtual Wiring — Proof of Concept
+## Virtual Electrical Wiring — Proof of Concept
 
 **Client:** South Cape College
 **Supplier:** Superimmersive
-**Project:** Virtual Wiring Proof of Concept
+**Project:** Basic Lighting Circuit Proof of Concept
 **Target Platform:** Meta Quest 3
 **Development Period:** 3 Weeks
 **Project Fee:** R85,000
@@ -13,11 +13,11 @@
 
 # 1. Project Overview
 
-Superimmersive will develop a **3-week Proof of Concept (POC)** demonstrating point-to-point virtual wiring.
+Superimmersive will develop a **3-week Proof of Concept (POC)** demonstrating an interactive **basic lighting circuit** in VR on **Meta Quest 3**.
 
-The learner will pull a connection from one point to another. A successful connection will spawn a connected wire object between the two points.
+The learner will identify the components required for a basic lighting circuit, connect terminals between a distribution board, light switch and light fitting, create virtual wires between connection points, complete the circuit and operate the light switch to observe the result.
 
-The POC is intentionally limited in scope and should not be considered a complete circuit-assembly, fault-finding and electrical-safety training system.
+The POC is intentionally limited in scope and should not be considered a complete electrical installation or training curriculum.
 
 ---
 
@@ -26,11 +26,14 @@ The POC is intentionally limited in scope and should not be considered a complet
 The primary objectives of the Proof of Concept are to demonstrate:
 
 - VR interaction using Meta Quest 3.
-- Selectable connection start and end points.
-- A pull-to-connect interaction.
-- Spawning a wire object on a valid connection.
-- Clear feedback for an invalid connection.
-- Reset of the wiring exercise.
+- A virtual electrical training environment.
+- Identification of the components required for a basic lighting circuit.
+- Connection of terminals between a distribution board, light switch and light fitting.
+- Creation and positioning of virtual wires between connection points.
+- Clear feedback when an incorrect connection is attempted.
+- Completion of the circuit and activation of the virtual light.
+- Operation of the light switch with an observable result.
+- Reset and repeat of the wiring task.
 
 ---
 
@@ -46,15 +49,23 @@ The proposed POC user journey is:
 
 ↓
 
-**Select Start Point**
+**Identify Required Components**
 
 ↓
 
-**Pull Toward End Point**
+**Connect Distribution Board, Switch and Light Fitting**
 
 ↓
 
-**Complete Valid Connection / See Wire Spawn**
+**Create and Position Virtual Wires**
+
+↓
+
+**Complete the Circuit and Activate the Light**
+
+↓
+
+**Operate the Switch and Observe the Result**
 
 ↓
 
@@ -66,37 +77,41 @@ The proposed POC user journey is:
 
 ## 4.1 Training Environment
 
-A focused VR panel or board with a small set of connection points.
+A focused VR electrical training environment containing the defined set of components for a single basic lighting circuit.
 
-## 4.2 Pull-to-Connect
+## 4.2 Defined Components
 
-The learner selects a start point and pulls a connection toward a second point.
+The POC uses a defined set of electrical components: a **distribution board, light switch and light fitting**. Additional circuit types are out of scope.
 
-## 4.3 Valid Connection
+## 4.3 Wiring Interaction
 
-A successful pair spawns a connected wire object between the two points.
+The learner connects the relevant terminals and creates virtual wires between connection points.
 
 ## 4.4 Invalid Connection
 
-An invalid pair fails cleanly with simple feedback and does not spawn a wire.
+An incorrect connection is rejected with clear feedback and does not complete the circuit.
 
-## 4.5 Reset
+## 4.5 Circuit Result
 
-The learner can clear wires and repeat the exercise.
+When the circuit is completed correctly, the virtual light can be activated. Operating the light switch produces an observable result.
+
+## 4.6 Reset
+
+The learner can reset the exercise and repeat the wiring task.
 
 ---
 
 # 5. Voice / Instruction
 
-Simple on-screen or spoken prompts to start connecting and reset. No full electrical-safety briefing is included.
+Simple on-screen or spoken prompts to identify components, connect terminals and reset. No full electrical-safety briefing is included.
 
 ---
 
 # 6. Deliverables
 
-- A Meta Quest 3 demonstration of point-to-point virtual wiring.
-- Wire spawn on valid connections and feedback on invalid connections.
-- Internal testing of the connect / reset flow.
+- A Meta Quest 3 demonstration of a basic lighting circuit.
+- Wiring between a distribution board, light switch and light fitting as described in this SOW.
+- Internal testing of valid / invalid connections, light activation and reset flow.
 - A demonstration to College staff.
 
 ---
@@ -105,10 +120,14 @@ Simple on-screen or spoken prompts to start connecting and reset. No full electr
 
 The following are excluded from the POC unless separately agreed:
 
-- Full circuit assembly logic.
+- Additional or more complex circuit types.
+- Unguided wiring without prompts or visual cues.
+- Circuit-diagram interpretation exercises.
 - Fault finding.
-- Electrical safety modules.
+- Electrical testing with virtual instruments such as multimeters.
+- Electrical safety, isolation or hazard-identification modules.
 - Live-circuit simulation or certification.
+- Advanced assessment of wiring accuracy, sequence or errors.
 - LMS integration.
 
 ---
@@ -117,18 +136,17 @@ The following are excluded from the POC unless separately agreed:
 
 The POC is planned as a focused **3-week** development period.
 
-## Week 1 - Board & Points
+## Week 1 - Environment & Components
 
-Connection points and pull-to-connect prototype.
+Electrical training environment, distribution board, switch, light fitting and connection points.
 
-## Week 2 - Wire Spawn
+## Week 2 - Wiring & Light Result
 
-Valid pair detection, spawned wire object and invalid-pair feedback.
+Wire creation, valid / invalid connection feedback, circuit completion and switch-operated light.
 
 ## Week 3 - Testing & Refinement
 
 Reset, prompts and demonstration polish.
-
 
 ---
 
@@ -206,9 +224,12 @@ The POC will be considered successfully delivered when the agreed core functiona
 The demonstration should include:
 
 - Learner entering the VR environment.
-- Learner selecting a start point and pulling to an end point.
-- A valid connection spawning a wire object.
-- An invalid connection failing with simple feedback.
+- Learner identifying the components for a basic lighting circuit.
+- Learner connecting terminals between the distribution board, light switch and light fitting.
+- Virtual wires being created between connection points.
+- Clear feedback when an incorrect connection is attempted.
+- The virtual light activating when the circuit is complete.
+- The light switch producing an observable result.
 - Reset and repeat of the exercise.
 
 The POC is intended to demonstrate technical feasibility and core interaction rather than final production quality.
@@ -239,10 +260,13 @@ The POC provides a technical foundation that may be expanded into a more compreh
 
 Potential future development could include:
 
-- Circuit assembly.
+- Additional circuit types, including more complex lighting and electrical circuits.
+- Unguided wiring without visual guides.
+- Circuit-diagram interpretation and reproduction in VR.
 - Fault finding.
-- Electrical safety.
-- Guided exercises and assessment.
+- Electrical testing with virtual instruments such as multimeters.
+- Electrical safety, including safe isolation and hazard identification.
+- Advanced assessment of wiring accuracy, sequence, errors and successful circuit operation.
 
 Any future development will be subject to a separate scope, timeline and commercial agreement.
 
@@ -302,4 +326,3 @@ By approving this Statement of Work, both parties acknowledge and agree to the s
 **Signature:** ______________________________
 
 **Date:** ___________________________________
-

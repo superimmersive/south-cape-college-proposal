@@ -70,7 +70,7 @@ export const navItems = [
 export const poc = {
   price: "R85,000",
   priceLabel: "Fixed Development Cost",
-  duration: "2–3 Weeks",
+  duration: "3 Weeks",
   durationLabel: "Expected Development Period",
 } as const;
 
