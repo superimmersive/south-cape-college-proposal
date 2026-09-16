@@ -1,11 +1,18 @@
 import { MediaFrame } from "@/components/media-frame";
 import { Reveal } from "@/components/reveal";
 import { Section } from "@/components/section";
-import { capabilities } from "@/content/capabilities";
+import {
+  capabilities,
+  showcasePresentedLinks,
+} from "@/content/capabilities";
 import { withProjectBackgrounds } from "@/content/project-background";
+import { withBase } from "@/lib/base-path";
 
 export function Built() {
   const items = withProjectBackgrounds(capabilities);
+  const presented = showcasePresentedLinks.filter(
+    (item) => item.label && item.href,
+  );
 
   return (
     <Section
@@ -49,6 +56,30 @@ export function Built() {
           </Reveal>
         ))}
       </ul>
+
+      {presented.length > 0 ? (
+        <Reveal className="mt-12 md:mt-16" delay={80}>
+          <p className="eyebrow">Presented to 4IR</p>
+          <p className="body-text mt-4 max-w-3xl text-[0.95rem]">
+            Materials shown during the demonstration, including training footage
+            that is not otherwise on this site. They are not the proposed Proof
+            of Concept.
+          </p>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            {presented.map((item) => (
+              <a
+                key={item.href}
+                href={withBase(item.href)}
+                className="btn btn--ghost btn--sm whitespace-normal text-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </Reveal>
+      ) : null}
     </Section>
   );
 }

@@ -7,6 +7,21 @@ export type Capability = {
   media: Media;
 };
 
+/**
+ * Materials shown during the 4IR demonstration. Sit under Showcase.
+ * Leave `href` empty to hide a control — never invent a URL here.
+ */
+export const showcasePresentedLinks = [
+  {
+    label: "Video Presented to 4IR",
+    href: "https://drive.google.com/file/d/1g6HmjwwVfoLPib8Dlc_4ams4qTfNvfyT/view?usp=drive_link",
+  },
+  {
+    label: "Welding Storyboard Presented to 4IR",
+    href: "https://superimmersive.github.io/smaw-xr-training-storyboard/",
+  },
+] as const;
+
 /** Drop clips or stills into `public/projects/<slug>/`. They play behind the placeholder overlay. */
 export const capabilities: Capability[] = [
   {
