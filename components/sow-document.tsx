@@ -5,10 +5,12 @@ import { Chain } from "@/components/chain";
 import { ConceptList } from "@/components/concept-list";
 import { MediaFrame } from "@/components/media-frame";
 import { Reveal } from "@/components/reveal";
+import { SplatPanel } from "@/components/splat-panel";
 import { SowFullDocument } from "@/components/sow-full-document";
 import { StartEnquiryButton } from "@/components/start-enquiry-button";
 import type { OpportunityArea } from "@/content/concepts";
 import { opportunityAreas, opportunityIndex } from "@/content/concepts";
+import { examplePanelsFor } from "@/content/project-background";
 import { commercialTerms, pocNotes, pocProcess } from "@/content/proposal";
 import { poc } from "@/content/site";
 
@@ -35,21 +37,12 @@ function RichText({ text, className = "" }: { text: string; className?: string }
 }
 
 function SowBadges({ area }: { area: OpportunityArea }) {
-  if (!area.badge && !area.future) return null;
+  if (!area.badge) return null;
 
   return (
-    <>
-      {area.badge && (
-        <span className="rounded-full border border-accent/45 bg-ink/80 px-3 py-1.5 font-mono text-[0.625rem] uppercase tracking-[0.2em] text-accent-soft backdrop-blur-sm">
-          {area.badge}
-        </span>
-      )}
-      {area.future && (
-        <span className="rounded-full border border-accent/45 bg-ink/80 px-3 py-1.5 font-mono text-[0.625rem] uppercase tracking-[0.2em] text-accent-soft backdrop-blur-sm">
-          Potential future concept
-        </span>
-      )}
-    </>
+    <span className="rounded-full border border-accent/45 bg-ink/80 px-3 py-1.5 font-mono text-[0.625rem] uppercase tracking-[0.2em] text-accent-soft backdrop-blur-sm">
+      {area.badge}
+    </span>
   );
 }
 
@@ -75,6 +68,9 @@ async function readFullSow(area: OpportunityArea) {
 export async function SowDocument({ area }: SowDocumentProps) {
   const fullSow = await readFullSow(area);
   const others = opportunityAreas.filter((item) => item.slug !== area.slug);
+  const examples = examplePanelsFor(area.slug, area.title, area.exampleCopy);
+  const splats = area.exampleSplats ?? [];
+  const exampleCount = examples.length + splats.length;
 
   return (
     <article>
@@ -332,6 +328,60 @@ export async function SowDocument({ area }: SowDocumentProps) {
               <p className="body-text">
                 <RichText text={area.pocBrief.limitation} />
               </p>
+            </Reveal>
+
+            <Reveal as="p" className="eyebrow mt-14 mb-6" id="sow-example">
+              Example
+            </Reveal>
+            <Reveal className="lede max-w-3xl" delay={80}>
+              <p>
+                A reference image or clip that conveys the idea. It is not the
+                proposed Proof of Concept.
+              </p>
+            </Reveal>
+            <Reveal className="mt-10" delay={120}>
+              <div
+                className={
+                  exampleCount > 1
+                    ? "grid items-start gap-5 md:grid-cols-2"
+                    : undefined
+                }
+              >
+                {splats.map((scene) => (
+                  <div key={scene.splat}>
+                    <SplatPanel scene={scene} />
+                    <p className="font-display mt-4 text-[1.05rem] tracking-tight text-fg">
+                      {scene.title}
+                    </p>
+                    <p className="body-text mt-2 text-[0.9rem]">{scene.note}</p>
+                  </div>
+                ))}
+                {examples.map((example) => (
+                  <div key={example.media.image || example.media.video || example.media.videoWebm || example.media.placeholder}>
+                    <MediaFrame
+                      media={example.media}
+                      ratio={example.ratio ?? "16 / 10"}
+                      fit={example.fit ?? "cover"}
+                      objectPosition={
+                        example.crop === "top" ? "center bottom" : undefined
+                      }
+                      sizes={
+                        exampleCount > 1
+                          ? "(min-width: 768px) 50vw, 100vw"
+                          : "100vw"
+                      }
+                    />
+                    {example.title ? (
+                      <p className="font-display mt-4 text-[1.05rem] tracking-tight text-fg">
+                        {example.title}
+                      </p>
+                    ) : null}
+                    {example.note ? (
+                      <p className="body-text mt-2 text-[0.9rem]">{example.note}</p>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
             </Reveal>
 
             <Reveal as="h3" className="h3 mt-14" delay={40}>

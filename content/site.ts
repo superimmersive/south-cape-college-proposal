@@ -43,7 +43,20 @@ export const contact = {
 } as const;
 
 /** Optional PDF export of this proposal. Drop the file in /public and set the path. */
-export const proposalPdf = "";
+export const proposalPdf =
+  "/Proposed Industry Collaboration with South Cape College.pdf";
+
+/**
+ * Hero panel actions. Leave a path empty and the button shows disabled —
+ * do not invent an APK or web URL.
+ */
+export const heroActions = {
+  title: "Craniotomy Training Demo",
+  apk: "https://drive.google.com/drive/folders/1dsGZLashUZFpkkGfQ9n4TtaHBhG6iniq?usp=drive_link",
+  apkLabel: "Meta Quest APK",
+  web: "https://superimmersive.github.io/craniotomy-exercise/",
+  webLabel: "Try On Web",
+} as const;
 
 export const navItems = [
   { id: "top", label: "Overview" },

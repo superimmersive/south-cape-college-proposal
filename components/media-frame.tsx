@@ -20,6 +20,10 @@ type MediaFrameProps = {
   compactPlaceholder?: boolean;
   /** Overlay content, e.g. a badge in the bottom-left of the frame. */
   overlay?: ReactNode;
+  /** `contain` shows the full frame; default `cover` fills the panel. */
+  fit?: "cover" | "contain";
+  /** CSS object-position, e.g. "center bottom" to crop the top. */
+  objectPosition?: string;
 };
 
 /**
@@ -38,6 +42,8 @@ export function MediaFrame({
   videoControls = false,
   compactPlaceholder = false,
   overlay,
+  fit = "cover",
+  objectPosition,
 }: MediaFrameProps) {
   const filled = hasMedia(media);
   const playlist =
@@ -64,9 +70,12 @@ export function MediaFrame({
         <MediaVideo
           src={media.video}
           webm={media.videoWebm}
+          playlist={playlist.length > 0 ? playlist : undefined}
           poster={media.poster}
           alt={media.alt ?? media.placeholder}
           controls={videoControls}
+          fit={fit}
+          objectPosition={objectPosition}
         />
       ) : media.image ? (
         <Image
@@ -75,7 +84,8 @@ export function MediaFrame({
           fill
           sizes={sizes}
           priority={priority}
-          className="object-cover"
+          className={fit === "contain" ? "object-contain" : "object-cover"}
+          style={objectPosition ? { objectPosition } : undefined}
         />
       ) : (
         <>

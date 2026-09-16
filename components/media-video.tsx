@@ -16,6 +16,8 @@ type MediaVideoProps = {
   alt?: string;
   /** Show a play/pause control. Feature videos use this, small cards do not. */
   controls?: boolean;
+  fit?: "cover" | "contain";
+  objectPosition?: string;
 };
 
 /**
@@ -30,6 +32,8 @@ export function MediaVideo({
   poster,
   alt,
   controls = false,
+  fit = "cover",
+  objectPosition,
 }: MediaVideoProps) {
   const clips: MediaClip[] =
     playlist && playlist.length > 0
@@ -89,7 +93,8 @@ export function MediaVideo({
     <>
       <video
         ref={ref}
-        className="absolute inset-0 h-full w-full object-cover"
+        className={`absolute inset-0 h-full w-full ${fit === "contain" ? "object-contain" : "object-cover"}`}
+        style={objectPosition ? { objectPosition } : undefined}
         poster={poster ? withBase(poster) : undefined}
         muted
         loop={!many}

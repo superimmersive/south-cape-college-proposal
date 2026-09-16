@@ -2,6 +2,39 @@ import { MediaFrame } from "@/components/media-frame";
 import { Reveal } from "@/components/reveal";
 import { heroMedia } from "@/content/capabilities";
 import { heroBackground } from "@/content/project-background";
+import { heroActions } from "@/content/site";
+import { withBase } from "@/lib/base-path";
+
+function HeroAction({
+  href,
+  label,
+  pendingTitle,
+}: {
+  href: string;
+  label: string;
+  pendingTitle: string;
+}) {
+  const className = "btn btn--ghost btn--sm";
+
+  if (!href) {
+    return (
+      <span className={className} aria-disabled="true" title={pendingTitle}>
+        {label}
+      </span>
+    );
+  }
+
+  return (
+    <a
+      href={withBase(href)}
+      className={className}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {label}
+    </a>
+  );
+}
 
 export function Hero() {
   const media = { ...heroMedia, ...heroBackground() };
@@ -55,6 +88,21 @@ export function Hero() {
             sizes="100vw"
             priority
           />
+          <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+            <p className="eyebrow eyebrow--plain">{heroActions.title}</p>
+            <div className="flex flex-wrap gap-3">
+              <HeroAction
+                href={heroActions.apk}
+                label={heroActions.apkLabel}
+                pendingTitle="APK not attached yet"
+              />
+              <HeroAction
+                href={heroActions.web}
+                label={heroActions.webLabel}
+                pendingTitle="Web demo not linked yet"
+              />
+            </div>
+          </div>
         </Reveal>
       </div>
     </section>

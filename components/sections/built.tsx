@@ -11,7 +11,7 @@ export function Built() {
     <Section
       id="work"
       eyebrow="Capability"
-      title="What We've Already Built"
+      title="Showcase"
       lede={
         <p>
           Superimmersive combines technical art, 3D development, software and

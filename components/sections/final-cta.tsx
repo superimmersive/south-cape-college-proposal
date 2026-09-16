@@ -1,7 +1,8 @@
 import { Reveal } from "@/components/reveal";
+import { ProposalPdfButton } from "@/components/proposal-pdf-button";
 import { StartEnquiryButton } from "@/components/start-enquiry-button";
 import { opportunityIndex } from "@/content/concepts";
-import { contact, founder, proposalPdf } from "@/content/site";
+import { contact, founder } from "@/content/site";
 
 export function FinalCta() {
   return (
@@ -41,20 +42,7 @@ export function FinalCta() {
 
         <Reveal className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center" delay={190}>
           <StartEnquiryButton areas={opportunityIndex} />
-
-          {proposalPdf ? (
-            <a href={proposalPdf} download className="btn btn--ghost">
-              Download Proposal PDF
-            </a>
-          ) : (
-            <span
-              className="btn btn--ghost"
-              aria-disabled="true"
-              title="PDF export not attached yet"
-            >
-              Download Proposal PDF
-            </span>
-          )}
+          <ProposalPdfButton className="btn btn--ghost" />
         </Reveal>
 
         <Reveal className="mt-16 md:mt-20" delay={120}>

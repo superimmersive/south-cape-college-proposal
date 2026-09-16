@@ -72,6 +72,28 @@ export type OpportunityArea = {
   approachNote?: string;
   /** Extra Proof of Concept brief shown above the closing CTA. */
   pocBrief?: OpportunityPocBrief;
+  /**
+   * Copy under example panels. Keys match the file name without extension
+   * (case-insensitive), e.g. "Ghosted guide".
+   */
+  exampleCopy?: Record<
+    string,
+    { title: string; note: string; ratio?: string; fit?: "cover" | "contain"; crop?: "top" }
+  >;
+  /** Interactive 3DGS viewers shown in the Example section. */
+  exampleSplats?: ExampleSplat[];
+};
+
+export type ExampleSplat = {
+  title: string;
+  note: string;
+  splat: string;
+  poster: string;
+  cameraUp: [number, number, number];
+  cameraPosition: [number, number, number];
+  cameraLookAt: [number, number, number];
+  downloadHint?: string;
+  fallbackUrl?: string;
 };
 
 /** Welding leads because the concept was already presented to the College. */
@@ -100,6 +122,16 @@ export const opportunityAreas: OpportunityArea[] = [
       placeholderImage: "/images/opportunity/welding.png",
     },
     badge: "Already presented",
+    exampleCopy: {
+      "Ghosted guide": {
+        title: "Ghosted guide",
+        note: "Shows the motion the learner is expected to follow.",
+      },
+      "tool use": {
+        title: "Tool use",
+        note: "The learner picks up the tool, traces the guided path, and leaves a black line as a stand-in for the weld deposit.",
+      },
+    },
     pocBrief: {
       title: "Suggested Proof of Concept",
       subtitle: "A focused 3-week technical demonstration",
@@ -148,6 +180,13 @@ export const opportunityAreas: OpportunityArea[] = [
       placeholderImage: "/images/opportunity/assembly-line.png",
     },
     badge: "Industrial automation",
+    exampleCopy: {
+      "Sorting Station": {
+        title: "Sorting Station",
+        note: "Objects on a conveyor are identified and directed to matching destinations.",
+        ratio: "16 / 9",
+      },
+    },
     approach: [
       {
         label: "Existing Physical Training Equipment",
@@ -209,6 +248,22 @@ export const opportunityAreas: OpportunityArea[] = [
       placeholderImage: "/images/opportunity/ppe.png",
     },
     badge: "Safety",
+    exampleCopy: {
+      "Apply PPE to Mannequin": {
+        title: "Apply PPE to Mannequin",
+        note: "The learner selects items and applies them to a digital mannequin.",
+        ratio: "486 / 650",
+        fit: "cover",
+        crop: "top",
+      },
+      "Identify PPE": {
+        title: "Identify PPE",
+        note: "The learner identifies the correct PPE from a focused set.",
+        ratio: "486 / 650",
+        fit: "cover",
+        crop: "top",
+      },
+    },
     pocBrief: {
       title: "Suggested Proof of Concept",
       subtitle: "A focused 3-week technical demonstration",
@@ -253,6 +308,13 @@ export const opportunityAreas: OpportunityArea[] = [
       placeholderImage: "/images/opportunity/tool-assembly.png",
     },
     badge: "Assembly",
+    exampleCopy: {
+      "Assemble Disassemble": {
+        title: "Assemble Disassemble",
+        note: "The learner works through assembly and disassembly of a tool.",
+        ratio: "16 / 9",
+      },
+    },
     pocBrief: {
       title: "Suggested Proof of Concept",
       subtitle: "A focused 3-week technical demonstration",
@@ -298,6 +360,18 @@ export const opportunityAreas: OpportunityArea[] = [
       placeholderImage: "/images/opportunity/electrical.png",
     },
     badge: "Electrical",
+    exampleCopy: {
+      "Wire stripping": {
+        title: "Wire stripping",
+        note: "The learner strips insulation to expose the copper conductors.",
+        ratio: "16 / 9",
+      },
+      "Consumer unit": {
+        title: "Consumer unit",
+        note: "The learner fits a module into a distribution board.",
+        ratio: "16 / 9",
+      },
+    },
     pocBrief: {
       title: "Suggested Proof of Concept",
       subtitle: "A focused 3-week technical demonstration",
@@ -433,6 +507,18 @@ export const opportunityAreas: OpportunityArea[] = [
       placeholderImage: "/images/opportunity/ev.png",
     },
     badge: "EV",
+    exampleCopy: {
+      "Expand motor": {
+        title: "Expand motor",
+        note: "The learner uses a slider to expand the motor and reveal its parts.",
+        ratio: "1 / 1",
+      },
+      "Part Identification": {
+        title: "Part Identification",
+        note: "The learner selects a part to view a short written description.",
+        ratio: "1280 / 594",
+      },
+    },
     pocBrief: {
       title: "Suggested Proof of Concept",
       subtitle: "A focused 3-week technical demonstration",
@@ -477,6 +563,18 @@ export const opportunityAreas: OpportunityArea[] = [
     },
     badge: "Hydrogen",
     future: true,
+    exampleCopy: {
+      "Green hydrogen": {
+        title: "Green hydrogen",
+        note: "An animated view of hydrogen produced through electrolysis.",
+        ratio: "1 / 1",
+      },
+      "SMR Facility": {
+        title: "SMR Facility",
+        note: "A facility-scale view of steam methane reforming for hydrogen production.",
+        ratio: "1 / 1",
+      },
+    },
     pocBrief: {
       title: "Suggested Proof of Concept",
       subtitle: "A focused 3-week technical demonstration",
@@ -522,6 +620,26 @@ export const opportunityAreas: OpportunityArea[] = [
     },
     badge: "Tourism",
     future: true,
+    exampleCopy: {
+      "3D site capture": {
+        title: "3D site capture",
+        note: "The learner walks a captured site in 3D.",
+        ratio: "16 / 9",
+      },
+    },
+    exampleSplats: [
+      {
+        title: "Train",
+        note: "A public 3DGS pipeline sample. Click to load, then drag to orbit and scroll to zoom.",
+        splat: "/examples/tourism/3dgs/train.splat",
+        poster: "/examples/tourism/3dgs/train.jpg",
+        downloadHint: "~31 MB",
+        fallbackUrl: "https://superimmersive.github.io/products/3dgs.html",
+        cameraUp: [0, -1, 0.16],
+        cameraPosition: [-3.01, -0.11, -3.75],
+        cameraLookAt: [0, 0.2, 0],
+      },
+    ],
     pocBrief: {
       title: "Suggested Proof of Concept",
       subtitle: "A focused 3-week technical demonstration",

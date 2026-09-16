@@ -44,7 +44,7 @@ function readFolder(relative: string) {
   return { clips, images };
 }
 
-function backgroundFromFolder(relative: string): Partial<Media> {
+function folderPlaylist(relative: string) {
   const { clips, images } = readFolder(relative);
   const playlist = [...clips.entries()]
     .sort(([a], [b]) => a.localeCompare(b))
@@ -54,6 +54,11 @@ function backgroundFromFolder(relative: string): Partial<Media> {
     }));
   const first = playlist[0];
   const image = images.sort((a, b) => a.localeCompare(b))[0];
+  return { playlist, first, image };
+}
+
+function backgroundFromFolder(relative: string): Partial<Media> {
+  const { playlist, first, image } = folderPlaylist(relative);
 
   return {
     placeholderClips: playlist,
@@ -80,4 +85,112 @@ export function withProjectBackgrounds(items: Capability[]): Capability[] {
       ...backgroundFor(item.slug),
     },
   }));
+}
+
+/** Caption from the file name, e.g. "Ghosted guide.gif" → "Ghosted guide". */
+function captionFromPath(url: string) {
+  const file = decodeURIComponent(url.split("/").pop() ?? "");
+  return path.basename(file, path.extname(file)).replace(/[-_]+/g, " ").trim();
+}
+
+export type ExampleCopy = {
+  title: string;
+  note: string;
+  ratio?: string;
+  fit?: "cover" | "contain";
+  crop?: "top";
+};
+
+export type ExamplePanel = {
+  title: string;
+  note: string;
+  ratio?: string;
+  fit?: "cover" | "contain";
+  crop?: "top";
+  media: Media;
+};
+
+function copyForCaption(caption: string, copy?: Record<string, ExampleCopy>) {
+  const match = Object.entries(copy ?? {}).find(
+    ([key]) => key.toLowerCase() === caption.toLowerCase(),
+  )?.[1];
+
+  return {
+    title: match?.title ?? caption,
+    note: match?.note ?? "",
+    ratio: match?.ratio,
+    fit: match?.fit,
+    crop: match?.crop,
+  };
+}
+
+/** One panel per still, GIF or clip in `public/examples/<slug>/`. */
+export function examplePanelsFor(
+  slug: string,
+  title: string,
+  copy?: Record<string, ExampleCopy>,
+): ExamplePanel[] {
+  const { clips, images } = readFolder(path.join("examples", slug));
+  const panels: ExamplePanel[] = [];
+
+  for (const url of [...images].sort((a, b) => a.localeCompare(b))) {
+    const caption = captionFromPath(url);
+    const { title: panelTitle, note, ratio, fit, crop } = copyForCaption(caption, copy);
+    panels.push({
+      title: panelTitle,
+      note,
+      ratio,
+      fit,
+      crop,
+      media: {
+        image: url,
+        alt: panelTitle,
+        placeholder: panelTitle,
+      },
+    });
+  }
+
+  for (const [, clip] of [...clips.entries()].sort(([a], [b]) => a.localeCompare(b))) {
+    const url = clip.webm || clip.mp4 || "";
+    const caption = captionFromPath(url);
+    const { title: panelTitle, note, ratio, fit, crop } = copyForCaption(caption, copy);
+    panels.push({
+      title: panelTitle,
+      note,
+      ratio,
+      fit,
+      crop,
+      media: {
+        video: clip.mp4,
+        videoWebm: clip.webm,
+        alt: panelTitle,
+        placeholder: panelTitle,
+      },
+    });
+  }
+
+  if (panels.length === 0) {
+    return [
+      {
+        title: "",
+        note: "",
+        media: {
+          placeholder: title,
+          placeholderNote: "Example visual",
+          alt: `${title} example`,
+        },
+      },
+    ];
+  }
+
+  if (copy) {
+    const order = Object.keys(copy).map((key) => key.toLowerCase());
+    panels.sort((a, b) => {
+      const ia = order.indexOf(a.title.toLowerCase());
+      const ib = order.indexOf(b.title.toLowerCase());
+      return (ia === -1 ? order.length : ia) - (ib === -1 ? order.length : ib);
+    });
+  }
+
+  return panels;
 }

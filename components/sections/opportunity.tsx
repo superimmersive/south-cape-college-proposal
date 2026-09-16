@@ -22,11 +22,6 @@ export function OpportunityCards() {
                 {area.badge}
               </span>
             )}
-            {area.future && (
-              <span className="rounded-full border border-accent/45 bg-accent/[0.08] px-2.5 py-1 font-mono text-[0.5625rem] uppercase tracking-[0.16em] text-accent-soft">
-                Potential future concept
-              </span>
-            )}
           </div>
 
           <Link
