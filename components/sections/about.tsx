@@ -17,7 +17,7 @@ export function About() {
             >
               {founder.portrait ? (
                 <img
-                  src={`${withBase(founder.portrait)}?v=9`}
+                  src={`${withBase(founder.portrait)}?v=10`}
                   alt={`${founder.name}, ${founder.title}`}
                   className="absolute inset-0 h-full w-full object-cover object-[center_18%]"
                 />

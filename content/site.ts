@@ -18,7 +18,7 @@ export const founder = {
   title: "Founder & Director",
   company: "Superimmersive",
   /** Portrait is optional. Drop a file in /public/images/founder and point here. */
-  portrait: "/images/founder/devon-kirchner-blue-bg.png",
+  portrait: "/images/founder/devon-kirchner-blue-grad-01.png",
   capabilities: [
     "Technical Art",
     "3D Development",
